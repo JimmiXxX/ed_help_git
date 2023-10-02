@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@media screen and (max-width: 1280px) and (min-width: 900px) {
+@media screen and (max-width: 1980px) and (min-width: 900px) {
 *
 {
     font-family: Montserrat;
@@ -35,6 +35,10 @@ h1
     flex-direction: column;
 }
 
+.calc_info
+{
+    gap: 20px;
+}
 span
 {
     display: flex;
