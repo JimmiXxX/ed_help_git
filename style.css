@@ -1,71 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@media (max-width: 1920px) and (min-width: 1200px) {
 
+@media screen and (max-width: 1400px) {
     * {
         font-family: Montserrat;
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
-        max-width: 1200px;
-        background-color: red;
-        /*background-color: #DEDEDE;*/
-    }
+        background-color: #DEDEDE;
+        max-width: 100%;
+     }
 
-    h1 {
+
+    h1
+    {
+
         font-size: 40px;
         font-weight: 500;
-        margin-bottom: 50px;
-    }
-
-    .calc {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin-top: 50px;
-    }
-
-
-    .calc_info {
+        margin: 50px 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
+        width: 1400px;
     }
 
-    .calc_info {
+    .around_div
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    .all_calc
+    {
+        width: 840px;
+    }
+
+    .calc_info
+    {
         gap: 20px;
-    }
+        display: flex;
+        flex-direction: column;
 
-    span {
+    }
+    span
+    {
         display: flex;
         justify-content: space-between;
-    }
-}
-
-@media (max-width: 1200px) and (min-width: 640px) {
-
-    * {
-        background-color: cyan;
+        align-items: center;
+        font-weight: 500;
+        font-size: 18px;
+        color: black;
     }
 
+    select
+    {
+        padding-right: 175px;
+        width: 360px;
+        height: 60px;
+        border-radius: 30px;
+        border-color: #0B7992;
+        display: flex;
+        align-items: center;
+        /*justify-content: ;*/
 
-    .calc_header {
+    }
+
+    .img_button
+    {
+        left: 3px;
+        top: 20px;
+        z-index: 1;
+        position: absolute;
+    }
+
+    i
+    {
         display: flex;
         justify-content: center;
-        align-items: center;
+        position: relative;
+        z-index: 0;
     }
-
-    h1 {
+    option
+    {
         font-size: 20px;
-        /*text-transform: uppercase;*/
-        /*margin: 0;*/
-
+        display: flex;
+        justify-content: left;
+    }
+    .meters
+    {
+        font-size: 18px;
+        padding-left: 20px;
+        display: flex;
+        height: 57px;
+        border-left: 1px solid #0B7992;
+        position: absolute;
+        z-index: 1;
+        right: 40px;
+        top: 1px;
+        font-style: normal;
     }
 }
 
-@media (max-width: 640px) and (min-width: 320px) {
-
+@media screen and (max-width: 640px) {
     * {
-        background-color: black;
+        margin: 0;
+        padding: 0;
+        background-color: #DEDEDE;
+        width: 640px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    * {
+        margin: 0;
+        padding: 0;
+        background-color: #DEDEDE;
+        width: 320px;
     }
 }

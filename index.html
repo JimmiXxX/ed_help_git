@@ -6,28 +6,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calc">
-        <div class="calc_header">
-            <h1>Калькулятор забора</h1>
-        </div>
+<div class="calc">
+    <div class="calc_header">
+        <h1>Калькулятор забора</h1>
+    </div>
+    <div class="around_div">
         <div class="all_calc">
             <label class="calc_info">
                 <span>Тип облицовки
-                <select>
-                    <option>Профнастил</option>
-                    <option>Евроштакетник</option>
-                </select>
+                    <i>
+                        <img src="Vector%20(2).png" class="img_button">
+                        <select dir="rtl" size="1">
+
+                            <option>Профнастил</option>
+                            <option>Евроштакетник</option>
+                      </select>
+                    </i>
                 </span>
                 <span>Высота забора
-                <select>
+
+                    <i>
+                        <img src="Vector%20(2).png" class="img_button">
+                           <select dir="rtl" size="1">
                     <option>1.5</option>
                     <option>1.8</option>
                     <option>2</option>
                     <option>2.2</option>
                     <option>3</option>
                 </select>
+                               <span class="meters">Метров</span>
+                    </i>
                 </span>
-                <span>Длина забора А</span>
+                <span>Длина забора А
+                <input>
+                    <span class="meters">Метров</span>
+                </span>
                 <span>Длина забора В</span>
                 <span>Длина забора С</span>
                 <span>Длина забора D</span>
@@ -37,6 +50,7 @@
             </label>
         </div>
     </div>
+</div>
 
 <script src="index.js"></script>
 </body>
