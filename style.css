@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
     *
     {
         font-family: Montserrat;
@@ -40,18 +40,13 @@
       font-width: 500;
   }
 
-  .allButton
-  {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-  }
-
   select
   {
       text-align: center;
       width: 360px;
       height: 60px;
+      font-size: 18px;
+      font-weight: 500;
       border: 1px solid #0B7992;
       border-radius: 30px;
       appearance: none;
@@ -62,16 +57,28 @@
 
   input
   {
-      width: 300px;
+      width: 150px;
       height: 60px;
       display: flex;
       justify-content: center;
       align-items: center;
+      font-size: 18px;
+      font-weight: 500;
       border: 1px solid #0B7992;
       border-radius: 30px;
       margin: 0;
       padding-left: 60px;
+      padding-right: 150px;
       background-color: #DEDEDE;
+  }
+
+  input::placeholder
+  {
+      font-weight: 300;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 
     input::-webkit-outer-spin-button,
@@ -79,8 +86,30 @@
         -webkit-appearance: none;
     }
 
+    label
+    {
+        margin-right: 0;
+    }
+
+    i{
+        position: absolute;
+        content: '';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid #0B7992;
+        font-weight: 500;
+        font-size: 18px;
+        height: 85%;
+        right: 30px;
+        top: 5px;
+        padding-left: 33px;
+        font-style: normal;
+    }
+
   span
   {
+      position: relative;
       padding: 5px;
       display: flex;
       justify-content: space-between;
@@ -89,26 +118,272 @@
       width: 1080px;
   }
 
+  footer
+  {
+      margin-top: 100px;
+  }
+
 }
 
 
+@media screen and (max-width: 1200px) and (min-width: 640px) {
+    *
+    {
+        font-family: Montserrat;
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 0;
+    }
 
-/*@media screen and (max-width: 1400px) and (min-width: 640px) {*/
-/*    **/
-/*    {*/
-/*        display: flex;*/
-/*        justify-content: center;*/
-/*        align-items: center;*/
-/*    }*/
-/*    body*/
-/*    {*/
-/*        font-size: 10px;*/
-/*    }*/
-/*}*/
+    body
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #DEDEDE;
+    }
 
-/*@media screen and (max-width: 640px){*/
-/*    body*/
-/*    {*/
-/*        font-size: 30px;*/
-/*    }*/
-/*}*/
+    .calc_header
+    {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+    }
+
+    h1
+    {
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .allDropMenu
+    {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .leftMenu
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    span
+    {
+        position: relative;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 1080px;
+        font-size: 16px;
+    }
+
+    i{
+        position: absolute;
+        content: '';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid #0B7992;
+        font-weight: 500;
+        font-size: 18px;
+        height: 85%;
+        right: 30px;
+        top: 5px;
+        padding-left: 20px;
+        font-style: normal;
+    }
+
+    input
+    {
+        width: 140px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #0B7992;
+        border-radius: 30px;
+        margin: 0;
+        padding-left: 30px;
+        padding-right: 130px;
+        background-color: #DEDEDE;
+    }
+
+    select
+    {
+        text-align: center;
+        width: 300px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #0B7992;
+        border-radius: 30px;
+        appearance: none;
+        background: url("Vector.svg") no-repeat 15px;
+        margin: 0;
+    }
+
+    label
+    {
+        margin-right: 0;
+    }
+
+    input::placeholder
+    {
+        font-weight: 300;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    footer
+    {
+        margin-top: 100px;
+    }
+
+}
+
+@media screen and (max-width: 640px){
+
+    *
+    {
+        font-family: Montserrat;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    body
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #DEDEDE;
+    }
+
+    .calc_header
+    {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+    }
+
+    h1
+    {
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .allDropMenu
+    {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .leftMenu
+    {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    span
+    {
+        position: relative;
+        display: flex;
+        padding: 10px 0;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 320px;
+        font-size: 16px;
+    }
+
+    i{
+        position: absolute;
+        content: '';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid #0B7992;
+        font-weight: 500;
+        font-size: 16px;
+        height: 50%;
+        right: 30px;
+        top: 35px;
+        padding-left: 20px;
+        font-style: normal;
+    }
+
+    input
+    {
+        width: 140px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #0B7992;
+        border-radius: 30px;
+        margin: 5px 0;
+        padding-left: 30px;
+        padding-right: 130px;
+        background-color: #DEDEDE;
+    }
+
+    select
+    {
+        text-align: center;
+        width: 300px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #0B7992;
+        border-radius: 30px;
+        appearance: none;
+        background: url("Vector.svg") no-repeat 15px;
+        margin: 5px 0;
+    }
+
+    label
+    {
+        margin: 0;
+    }
+
+    input::placeholder
+    {
+        font-weight: 300;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    footer
+    {
+        margin-top: 100px;
+    }
+
+}
