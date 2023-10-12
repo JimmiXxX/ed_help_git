@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 320px) and (max-width: 639px){
+
     *
     {
         font-family: Montserrat;
-        padding: 0;
+        max-width: 320px;
         margin: 0 auto;
-        max-width: 1400px;
+        padding: 0;
     }
+
     body
     {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
         background-color: #DEDEDE;
     }
 
@@ -25,70 +26,37 @@
         margin: 50px 0;
     }
 
+    h1
+    {
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .allDropMenu
     {
-        max-width: 1600px;
+        max-width: 320px;
         margin: 0 auto;
     }
 
-  .leftMenu
-  {
-      flex: 0 0;
-      display: flex;
-      flex-direction: column;
-      font-size: 18px;
-      font-width: 500;
-  }
-
-  select
-  {
-      text-align: center;
-      width: 360px;
-      height: 60px;
-      font-size: 18px;
-      font-weight: 500;
-      border: 1px solid #0B7992;
-      border-radius: 30px;
-      appearance: none;
-      background: url("Vector.svg") no-repeat 15px;
-      margin: 0;
-  }
-
-
-  input
-  {
-      width: 150px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 18px;
-      font-weight: 500;
-      border: 1px solid #0B7992;
-      border-radius: 30px;
-      margin: 0;
-      padding-left: 60px;
-      padding-right: 150px;
-      background-color: #DEDEDE;
-  }
-
-  input::placeholder
-  {
-      font-weight: 300;
-      font-size: 12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
+    .leftMenu
+    {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
     }
 
-    label
+    span
     {
-        margin-right: 0;
+        position: relative;
+        display: flex;
+        padding: 10px 0;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 320px;
+        font-size: 16px;
     }
 
     i{
@@ -99,34 +67,72 @@
         align-items: center;
         border-left: 1px solid #0B7992;
         font-weight: 500;
-        font-size: 18px;
-        height: 85%;
+        font-size: 16px;
+        height: 50%;
         right: 30px;
-        top: 5px;
-        padding-left: 33px;
+        top: 35px;
+        padding-left: 20px;
         font-style: normal;
     }
 
-  span
-  {
-      position: relative;
-      padding: 5px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 auto;
-      width: 1080px;
-  }
+    input
+    {
+        width: 140px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #0B7992;
+        border-radius: 30px;
+        margin: 5px 0;
+        padding-left: 30px;
+        padding-right: 130px;
+        background-color: #DEDEDE;
+    }
 
-  footer
-  {
-      margin-top: 100px;
-  }
+    select
+    {
+        text-align: center;
+        width: 300px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #0B7992;
+        border-radius: 30px;
+        appearance: none;
+        background: url("Vector.svg") no-repeat 15px;
+        margin: 5px 0;
+    }
+
+    label
+    {
+        margin: 0;
+    }
+
+    input::placeholder
+    {
+        font-weight: 300;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    footer
+    {
+        margin-top: 100px;
+    }
 
 }
 
-
-@media screen and (max-width: 1200px) and (min-width: 640px) {
+@media (min-width: 640px) and (max-width: 1199px) {
     *
     {
         font-family: Montserrat;
@@ -257,21 +263,20 @@
 
 }
 
-@media screen and (max-width: 640px){
-
+@media (min-width: 1200px) {
     *
     {
         font-family: Montserrat;
-        max-width: 320px;
-        margin: 0 auto;
         padding: 0;
+        margin: 0 auto;
+        max-width: 1400px;
     }
-
     body
     {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         background-color: #DEDEDE;
     }
 
@@ -282,37 +287,70 @@
         margin: 50px 0;
     }
 
-    h1
-    {
-        font-size: 20px;
-        font-weight: 500;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     .allDropMenu
     {
-        max-width: 320px;
+        max-width: 1600px;
         margin: 0 auto;
     }
 
-    .leftMenu
-    {
-        display: flex;
-        gap: 10px;
-        flex-direction: column;
+  .leftMenu
+  {
+      flex: 0 0;
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      font-width: 500;
+  }
+
+  select
+  {
+      text-align: center;
+      width: 360px;
+      height: 60px;
+      font-size: 18px;
+      font-weight: 500;
+      border: 1px solid #0B7992;
+      border-radius: 30px;
+      appearance: none;
+      background: url("Vector.svg") no-repeat 15px;
+      margin: 0;
+  }
+
+
+  input
+  {
+      width: 150px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 500;
+      border: 1px solid #0B7992;
+      border-radius: 30px;
+      margin: 0;
+      padding-left: 60px;
+      padding-right: 150px;
+      background-color: #DEDEDE;
+  }
+
+  input::placeholder
+  {
+      font-weight: 300;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
     }
 
-    span
+    label
     {
-        position: relative;
-        display: flex;
-        padding: 10px 0;
-        flex-direction: column;
-        margin: 0 auto;
-        width: 320px;
-        font-size: 16px;
+        margin-right: 0;
     }
 
     i{
@@ -323,67 +361,31 @@
         align-items: center;
         border-left: 1px solid #0B7992;
         font-weight: 500;
-        font-size: 16px;
-        height: 50%;
+        font-size: 18px;
+        height: 85%;
         right: 30px;
-        top: 35px;
-        padding-left: 20px;
+        top: 5px;
+        padding-left: 33px;
         font-style: normal;
     }
 
-    input
-    {
-        width: 140px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
-        font-weight: 500;
-        border: 1px solid #0B7992;
-        border-radius: 30px;
-        margin: 5px 0;
-        padding-left: 30px;
-        padding-right: 130px;
-        background-color: #DEDEDE;
-    }
+  span
+  {
+      position: relative;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      width: 1080px;
+  }
 
-    select
-    {
-        text-align: center;
-        width: 300px;
-        height: 50px;
-        font-size: 16px;
-        font-weight: 500;
-        border: 1px solid #0B7992;
-        border-radius: 30px;
-        appearance: none;
-        background: url("Vector.svg") no-repeat 15px;
-        margin: 5px 0;
-    }
-
-    label
-    {
-        margin: 0;
-    }
-
-    input::placeholder
-    {
-        font-weight: 300;
-        font-size: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-    }
-
-    footer
-    {
-        margin-top: 100px;
-    }
+  footer
+  {
+      margin-top: 100px;
+  }
 
 }
+
+
+
