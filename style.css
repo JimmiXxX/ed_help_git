@@ -1,119 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-@media screen and (max-width: 1400px) {
-    * {
+@media screen and (min-width: 1000px) {
+    *
+    {
         font-family: Montserrat;
-        margin: 0;
         padding: 0;
-        background-color: #DEDEDE;
-        max-width: 100%;
-     }
-
-
-    h1
+        margin: 0 auto;
+        max-width: 1400px;
+    }
+    body
     {
-
-        font-size: 40px;
-        font-weight: 500;
-        margin: 50px 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 1400px;
-    }
-
-    .around_div
-    {
-        display: flex;
-        justify-content: center;
-    }
-
-    .all_calc
-    {
-        width: 840px;
-    }
-
-    .calc_info
-    {
-        gap: 20px;
-        display: flex;
         flex-direction: column;
-
-    }
-    span
-    {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-weight: 500;
-        font-size: 18px;
-        color: black;
+        background-color: #DEDEDE;
     }
 
-    select
-    {
-        padding-right: 175px;
-        width: 360px;
-        height: 60px;
-        border-radius: 30px;
-        border-color: #0B7992;
-        display: flex;
-        align-items: center;
-        /*justify-content: ;*/
-
-    }
-
-    .img_button
-    {
-        left: 3px;
-        top: 20px;
-        z-index: 1;
-        position: absolute;
-    }
-
-    i
+    .calc_header
     {
         display: flex;
         justify-content: center;
-        position: relative;
-        z-index: 0;
+        margin: 50px 0;
     }
-    option
+
+    .allDropMenu
     {
-        font-size: 20px;
-        display: flex;
-        justify-content: left;
+        max-width: 1600px;
+        margin: 0 auto;
     }
-    .meters
-    {
-        font-size: 18px;
-        padding-left: 20px;
-        display: flex;
-        height: 57px;
-        border-left: 1px solid #0B7992;
-        position: absolute;
-        z-index: 1;
-        right: 40px;
-        top: 1px;
-        font-style: normal;
-    }
+
+  .leftMenu
+  {
+      flex: 0 0;
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      font-width: 500;
+  }
+
+  .allButton
+  {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  select
+  {
+      text-align: center;
+      width: 360px;
+      height: 60px;
+      border: 1px solid #0B7992;
+      border-radius: 30px;
+      appearance: none;
+      background: url("Vector.svg") no-repeat 15px;
+      margin: 0;
+  }
+
+
+  input
+  {
+      width: 300px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #0B7992;
+      border-radius: 30px;
+      margin: 0;
+      padding-left: 60px;
+      background-color: #DEDEDE;
+  }
+
+
+  span
+  {
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      width: 1080px;
+  }
+
 }
 
-@media screen and (max-width: 640px) {
-    * {
-        margin: 0;
-        padding: 0;
-        background-color: #DEDEDE;
-        width: 640px;
-    }
-}
 
-@media screen and (max-width: 320px) {
-    * {
-        margin: 0;
-        padding: 0;
-        background-color: #DEDEDE;
-        width: 320px;
-    }
-}
+
+/*@media screen and (max-width: 1400px) and (min-width: 640px) {*/
+/*    **/
+/*    {*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*    }*/
+/*    body*/
+/*    {*/
+/*        font-size: 10px;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width: 640px){*/
+/*    body*/
+/*    {*/
+/*        font-size: 30px;*/
+/*    }*/
+/*}*/
