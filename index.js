@@ -25,7 +25,7 @@ selectId.addEventListener('change', function ()
                      <span>Стоимость саморезов за 1 шт.
                          <input type="number" placeholder="Введите значение"> <i>Руб.</i>
                      </span>
-                     <span>Стоимость монтажа за 1 погонный метр
+                     <span>Стоимость монтажа за 1 п.м
                          <input type="number" placeholder="Введите значение"> <i>Руб.</i>
                      </span>
             </div>
