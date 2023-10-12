@@ -1,22 +1,65 @@
-let prof = document.querySelector('.profMenu')
-let menu = document.querySelector('.dropMenu')
+let selectId = document.querySelector('select')
+let priceEuro = document.querySelector('.priceEuro')
 
-function dropButtton()
+
+selectId.addEventListener('change', function ()
 {
-    document.querySelector(".dropDownMenu").classList.toggle("show")
-    console.log("Привет!!!")
-}
+    let getValue = this.value
+    // console.log(getValue)
 
-function takeMenu()
-{
+    if (getValue === 'Евроштакетник')
+    {
+        let euro =
+            `
+            <div class="euroPrice">
+                <h1>Стоимость евроштакетника</h1>
+                     <span>Стоимость столбов за 1 п.м
+                         <input type="number" placeholder="Введите значение"> <i>Руб.</i>
+                     </span>
+                     <span>Стоимость лаг за 1 п.м
+                         <input type="number" placeholder="Введите значение"> <i>Руб.</i>
+                     </span>
+                     <span>Стоимость штакетника за 1 п.м
+                         <input type="number" placeholder="Введите значение"> <i>Руб.</i>
+                     </span>
+                     <span>Стоимость саморезов за 1 шт.
+                         <input type="number" placeholder="Введите значение"> <i>Руб.</i>
+                     </span>
+                     <span>Стоимость монтажа за 1 погонный метр
+                         <input type="number" placeholder="Введите значение"> <i>Руб.</i>
+                     </span>
+            </div>
+            `
+
+        priceEuro.innerHTML = euro
+    }
+    else
+    {
+        let prof =
+            `
+            <div class="profPrice">
+                <h1>Стоимость профнастила</h1>
+                     <span>Стоимость столбов за 1 п.м
+                         <input type="number" placeholder="Введите значение"> <i>Руб.</i>
+                     </span>
+                     <span>Стоимость лаг за 1 п.м
+                         <input type="number" placeholder="Введите значение"> <i>Руб.</i>
+                     </span>
+                     <span>Стоимость профнастила за 1м2
+                         <input type="number" placeholder="Введите значение"> <i>Руб.</i>
+                     </span>
+                     <span>Стоимость саморезов за 1 шт.
+                         <input type="number" placeholder="Введите значение"> <i>Руб.</i>
+                     </span>
+                     <span>Стоимость монтажа за 1 п.м
+                         <input type="number" placeholder="Введите значение"> <i>Руб.</i>
+                     </span>
+            </div>
+            `
+
+        priceEuro.innerHTML = prof
+    }
 
 
-    console.log("Вывелся текст!!!")
-    const numberTemplate =
-        `
-         <button onclick="dropButtton()" class="dropMenu">%answer%</button>
-        `
+})
 
-    const numberHTML = numberTemplate.replace('%answer', prof)
-    menu.innerHTML = numberHTML
-}
