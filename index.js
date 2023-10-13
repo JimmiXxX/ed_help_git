@@ -1,6 +1,7 @@
 let selectId = document.querySelector('select')
 let priceEuro = document.querySelector('.priceEuro')
-
+let boldProf = document.querySelector('.boldProf')
+let workProf = document.querySelector('.workProf')
 
 selectId.addEventListener('change', function ()
 {
@@ -11,8 +12,8 @@ selectId.addEventListener('change', function ()
     {
         let euro =
             `
-            <div class="euroPrice">
-                <h1>Стоимость евроштакетника</h1>
+            <div class="euroPrice" style="padding-left: 15px; padding-top: 50px;">
+                <h1 style="padding-bottom: 50px;">Стоимость евроштакетника</h1>
                      <span>Стоимость столбов за 1 п.м
                          <input type="number" placeholder="Введите значение"> <i>Руб.</i>
                      </span>
@@ -31,14 +32,16 @@ selectId.addEventListener('change', function ()
             </div>
             `
 
+        boldProf.style.display = "none"
+        workProf.style.display = "none"
         priceEuro.innerHTML = euro
     }
     else
     {
         let prof =
             `
-            <div class="profPrice">
-                <h1>Стоимость профнастила</h1>
+            <div class="profPrice" style="padding-left: 15px; padding-top: 50px;">
+                <h1 style="padding-bottom: 50px;">Стоимость профнастила</h1>
                      <span>Стоимость столбов за 1 п.м
                          <input type="number" placeholder="Введите значение"> <i>Руб.</i>
                      </span>
@@ -56,10 +59,10 @@ selectId.addEventListener('change', function ()
                      </span>
             </div>
             `
-
+        boldProf.style.display = "flex"
+        workProf.style.display = "flex"
         priceEuro.innerHTML = prof
     }
-
 
 })
 
