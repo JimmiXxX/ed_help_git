@@ -328,7 +328,7 @@
 
   select
   {
-      text-align: center;
+      text-align: left;
       width: 360px;
       height: 60px;
       font-size: 18px;
@@ -336,14 +336,18 @@
       border: 1px solid #0B7992;
       border-radius: 30px;
       appearance: none;
-      background: url("Vector.svg") no-repeat 15px;
+      padding-left: 80px;
+      background: url("Vector.svg") no-repeat 15px ;
       margin: 0;
   }
-
+  option
+  {
+      background-color: #DEDEDE;
+  }
 
   input
   {
-      width: 150px;
+      width: 170px;
       height: 60px;
       display: flex;
       justify-content: center;
@@ -353,16 +357,17 @@
       border: 1px solid #0B7992;
       border-radius: 30px;
       margin: 0;
-      padding-left: 60px;
-      padding-right: 150px;
+      padding-left: 70px;
+      padding-right: 120px;
       background-color: #DEDEDE;
   }
 
   input::placeholder
   {
       font-weight: 300;
-      font-size: 12px;
+      font-size: 10px;
       display: flex;
+      width: 100px;
       justify-content: center;
       align-items: center;
   }
@@ -379,7 +384,6 @@
 
     i{
         position: absolute;
-        content: '';
         display: flex;
         justify-content: center;
         align-items: center;
@@ -389,7 +393,8 @@
         height: 85%;
         right: 30px;
         top: 5px;
-        padding-left: 33px;
+        width: 120px;
+        /*padding-left: 33px;*/
         font-style: normal;
     }
 
@@ -409,8 +414,36 @@
       margin-top: 100px;
   }
 
+  .workProf .minusProf
+  {
+      position: absolute;
+      top: 10px;
+      right: 310px;
+      font-size: 30px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px 15px;
 
+  }
+    .workProf .plusProf
+  {
+      position: absolute;
+      top: 10px;
+      right: 150px;
+      font-size: 30px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px 15px;
+  }
 
+    .workProfNumber[]{
+        width: 200px;
+        padding-left: 60px;
+        padding-right: 60px;
+        background-color: red;
+    }
 }
 
 
