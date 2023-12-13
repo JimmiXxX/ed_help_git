@@ -6,9 +6,8 @@ const hiddenMenu = document.querySelector( '.hiddenMenu' )
 const euroBlock = document.querySelector( '.euroBlock' )
 const profBlock = document.querySelector( '.profBlock' )
 const workProf = document.querySelector( '.workProf' )
-const dataCreate = document.querySelector('.dataCreate')
+const dataCreate = document.querySelector( '.dataCreate' )
 
-const content = document.querySelector( '.content' )
 const tubeSize = document.querySelector( '.tubeSize' ) //Труба для столбов
 const stubTube = document.querySelector( '.stubTube' ) //Заглушки на столбы
 const workValue = document.querySelector( '.workProfNumber' )
@@ -17,7 +16,7 @@ const printCalcResult = document.querySelector( '.printCalcResult' )
 const Pillar_Price = document.querySelector( '.pillarPrice' ) // Объявление стоимости столбов у штакетника
 const Lag_Price = document.querySelector( '.LagPrice' ) // Объявление стоимости лаг у штакетника
 const Fence_Price = document.querySelector( '.fencePrice' ) // Объявление стоимости штакетника
-const SelfTappingScrews_Price = document.querySelector( '.selfTappingScrewsPrice' ) // Объявление стоимости саморезов
+const SelfTappingScrews_Price = document.querySelector( '.selfTappingScrewsPriceProf' ) // Объявление стоимости саморезов
 const ProfPillar_Price = document.querySelector( '.profPillarPrice' ) // Объявление стоимости столбов у профнастила
 const ProfLag_Price = document.querySelector( '.profLagPrice' ) // Объявление стоимости лаг у профнастила
 const Prof_Price = document.querySelector( '.profPrice' ) // Объявление стоимости профнастила
@@ -146,6 +145,7 @@ stubTube.addEventListener( 'change', () => {
 
 lagOption.addEventListener( 'change', () => {
     ProfLag_Price.value = lagAllSize[lagOption.value]
+
 } )
 
 
@@ -162,8 +162,8 @@ let options = {
 
 const calcTube = () => {
 
-    printCalcResult.style.display = 'block'
 
+    printCalcResult.style.display = 'block'
     const Perimeter = Number( A.value ) + Number( B.value ) + Number( C.value ) + Number( D.value ) // Расчет периметра
     const Square = Perimeter * H.value  // Расчет площади (периметр * высота столбов)
     const valueStep = Square / step.value - 4 // Количество столбов и профлистов
@@ -172,10 +172,9 @@ const calcTube = () => {
     const lag = valueStep * lagValue.value // Количество лаг на весь забор
     const SelfTappingScrewsValue = lag * 5 // Количество саморезов
     const priceInstall = InstallationPrice.value * Perimeter
-    dataCreate.innerHTML = new Date().toLocaleDateString('ru', options)
+    dataCreate.innerHTML = new Date().toLocaleDateString( 'ru', options )
 
-    console.log( InstallationPrice.value )
-    const allPrice = PriceOverlap + (SelfTappingScrewsValue * 5) + priceInstall + (valueStep * ProfPillar_Price.value) + (valueStep * lagAllSize[lagOption.value])
+    const allPrice = PriceOverlap + (SelfTappingScrewsValue * SelfTappingScrews_Price.value) + priceInstall + (valueStep * ProfPillar_Price.value) + (valueStep * ProfLag_Price.value)
 
 
     document.querySelector( '.resultPerimeter' ).innerHTML = Perimeter
@@ -183,13 +182,13 @@ const calcTube = () => {
     document.querySelector( '.resultPillar' ).innerHTML = valueStep
     document.querySelector( '.resultSelfTapping' ).innerHTML = SelfTappingScrewsValue
     document.querySelector( '.resultLag' ).innerHTML = lag
-    document.querySelector( '.resultList' ).innerHTML = (Overlap + valueStep)
+    document.querySelector( '.resultList' ).innerHTML = Overlap + valueStep
 
     document.querySelector( '.priceProf' ).innerHTML = PriceOverlap
-    document.querySelector( '.priceSelfTapping' ).innerHTML = SelfTappingScrewsValue * 5
+    document.querySelector( '.priceSelfTapping' ).innerHTML = SelfTappingScrewsValue * SelfTappingScrews_Price.value
     document.querySelector( '.priceInstallation' ).innerHTML = priceInstall
     document.querySelector( '.pricePillar' ).innerHTML = valueStep * ProfPillar_Price.value
-    document.querySelector( '.priceLag' ).innerHTML = valueStep * lagAllSize[lagOption.value]
+    document.querySelector( '.priceLag' ).innerHTML = valueStep * ProfLag_Price.value
     document.querySelector( '.priceAll' ).innerHTML = allPrice
 }
 
