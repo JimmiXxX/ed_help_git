@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <title>Ed_calc</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
+
+
 <div class="calc">
-    <div class="calc_header">
-        <h1>Калькулятор забора</h1>
-    </div>
 
-    <div class="allDropMenu">
-        <div class="leftMenu">
+    <div class="headerMenu">Калькулятор забора</div>
 
+    <div class="calcMenu">
+        <span>  Тип облицовки
+            <label>
+                <select class="MainType">
+                    <option selected disabled hidden="hidden" class="optionVisible">Выберите тип</option>
+                    <option>Профнастил</option>
+                    <option>Евроштакетник</option>
+                </select>
+            </label>
+        </span>
 
-            <button onclick="calc()"> Рассчитать</button>
-            <span>  Тип облицовки
-            <select class="test_moment">
-                <option selected disabled hidden="hidden" class="optionVisible">Выберите тип</option>
-                <option>Профнастил</option>
-                <option>Евроштакетник</option>
-            </select>
-            </span>
+        <div class="hiddenMenu" style="display: none">
 
             <span class="euroMat" style="display: none">Материал забора
                 <select>
@@ -49,7 +51,7 @@
             <input type="number" value="10" placeholder="Введите значение" class="widthA"> <i>Метров</i>
             </span>
 
-            <span >Длина забора B
+            <span>Длина забора B
             <input type="number" value="10" placeholder="Введите значение" class="widthB"> <i>Метров</i>
             </span>
 
@@ -61,14 +63,8 @@
             <input type="number" value="10" placeholder="Введите значение" class="widthD"> <i>Метров</i>
             </span>
 
-            <span>Труба для забора
-                <select class="tubeSize">
-                    <option>60*40</option>
-                    <option>40*40</option>
-                    <option>60*60</option>
-                    <option>80*80</option>
-                    <option>100*100</option>
-                </select> <i>мм</i>
+            <span>Труба для столбов
+                    <select class="tubeSize"></select><i>мм</i>
             </span>
 
             <span>Шаг столбов
@@ -87,11 +83,6 @@
 
             <span>Заглушки на столбы
             <select class="stubTube">
-                <option>60*40</option>
-                <option>40*40</option>
-                <option>60*60</option>
-                <option>80*80</option>
-                <option>100*100</option>
             </select> <i>мм</i>
             </span>
 
@@ -142,12 +133,10 @@
                 </select> <i>мм</i>
             </span>
 
-            <span class="workProf" style="display:flex">Рабочая ширина листа профнастила
-                <label>
+            <span class="workProf" style="display:none">Рабочая ширина листа профнастила
                 <button class="minusProf" onclick="minusNumber()">-</button>
-            <input type="number" value="100" placeholder="Введите значение" class="workProfNumber">
+                <input type="number" value="100" placeholder="Введите значение" class="workProfNumber">
                 <button class="plusProf" onclick="plusNumber()">+</button>
-                    </label>
                 <i>мм</i>
             </span>
 
@@ -163,18 +152,168 @@
                 </select>
             </span>
         </div>
+        <div class="euroBlock" style="display: none">
+            <div class="headerMenu" style="padding-bottom: 50px;">Стоимость евроштакетника</div>
+            <span>Стоимость столбов за 1 п.м
+                         <input type="number" placeholder="Введите значение" class="pillarPrice"> <i>Руб.</i>
+                     </span>
+            <span>Стоимость лаг за 1 п.м
+                         <input type="number" placeholder="Введите значение" class="LagPrice"> <i>Руб.</i>
+                     </span>
+            <span>Стоимость штакетника за 1 п.м
+                         <input type="number" value="180" placeholder="Введите значение" class="fencePrice"> <i>Руб.</i>
+                     </span>
+            <span>Стоимость саморезов за 1 шт.
+                         <input type="number" placeholder="Введите значение" class="selfTappingScrewsPrice"> <i>Руб.</i>
+                     </span>
+            <span>Стоимость монтажа за 1 п.м
+                         <input type="number" placeholder="Введите значение" class="InstallationPrice_Euro"> <i>Руб.</i>
+                     </span>
+            <button onclick="calcEuro()"> Рассчитать</button>
+        </div>
+        <div class="profBlock" style="display: none">
+            <div class="headerMenu" style="padding-bottom: 50px;">Стоимость профнастила</div>
+            <span>Стоимость столбов за 1м2
+                         <input type="number" value="630" placeholder="Введите значение" class="profPillarPrice"> <i>Руб.</i>
+                     </span>
+            <span>Стоимость лаг за 1м2
+                         <input type="number" value="366" placeholder="Введите значение" class="profLagPrice"> <i>Руб.</i>
+                     </span>
+            <span>Стоимость профнастила за 1м2
+                         <input type="number" value="620" placeholder="Введите значение" class="profPrice"> <i>Руб.</i>
+                     </span>
+            <span>Стоимость саморезов за 1 шт.
+                         <input type="number" value="5" placeholder="Введите значение"
+                                class="selfTappingScrewsPrice"> <i>Руб.</i>
+                     </span>
+            <span>Стоимость монтажа за 1м2
+                         <input type="number" value="800" placeholder="Введите значение" class="InstallationPrice_Prof"> <i>Руб.</i>
+                     </span>
+            <button class="profButton" onclick="calcTube()"> Рассчитать</button>
+        </div>
     </div>
 
+    <div class="printCalcResult" style="display: none">
+        <div class="content">
+            <div class="requisites">
+                <div class="dataCreate"></div>
+                <div class="headerRequisites">Реквизиты компании:</div>
+                <div class="textRequisites">
+                    <img src="LogoPrint.png" height="60" width="200" style="margin-left: 0; margin-bottom: 10px;">
+                    <p class="pRequisites">
+                    ИП "Шиканов Константин Алексеевич" <br>
+                    Юридический адрес: 630520 Новосибирская область, Новосибирский район,
+                    с Верх-Тула ул. Кобызева 4/1 <br>
+                    Фактический адрес: 630052, г. Новосибирск, ул. Толмачевская, 21а, этаж №2 офис № 21 <br>
+                    Расчётный счёт: 40802810344050116321 <br>
+                    ИНН: 543309005601 <br>
+                    ОГРНИП: 319547600071105 <br>
+                    Банк: СИБИРСКИЙ БАНК ПАО СБЕРБАНК <br>
+                    БИК: 045004641 <br>
+                    Кор. счёт: 30101810500000000641 <br>
+                    БИК 045004641 <br>
+                    Тел. 8-800-505-19-93 <br>
+                    https://pult-nsk.ru <br>
+                    https:montagservice54.ru <br>
+                    Mail: montagservice54@mail.ru <br>
+                    </p>
 
-    <div class="priceEuro"></div>
+                    <p class="bottomText">Шиканов Константин Алексеевич, действующий на основании <br>
+                    ОГРНИП  319547600071105
+                    </p>
 
-    <footer>
 
-    </footer>
+
+                </div>
+            </div>
+            <h1>Расчеты</h1>
+            <div class="calculation">
+                <div class="result">
+                    <h3 class="h3Result">Общие расчеты: </h3>
+                    <div class="border">Общий периметр:
+                        <div>
+                            <a class="resultPerimeter"></a>
+                            метров
+                        </div>
+                    </div>
+                    <div class="border">Общая площадь
+                        <div>
+                            <a class="resultPlaza"></a>
+                            метров^2
+                        </div>
+                    </div>
+                    <div class="border">Общее количество столбов
+                        <div>
+                            <a class="resultPillar"></a>
+                            шт.
+                        </div>
+                    </div>
+                    <div class="border">Общее количество саморезов
+                        <div>
+                            <a class="resultSelfTapping"></a>
+                            шт.
+                        </div>
+                    </div>
+
+                    <div class="border">Количество лаг на забор
+                        <div>
+                            <a class="resultLag"></a>
+                        шт.
+                        </div>
+                    </div>
+                    <div class="border">Общее количество листов
+                        <div>
+                            <a class="resultList"></a>
+                            шт.
+                        </div>
+                    </div>
+                </div>
+                <div class="priceResult">
+                    <h3 class="h3Result">Стоимость: </h3>
+                    <div class="border">Стоимость профнастила:
+                        <div>
+                            <a class="priceProf"></a>
+                            руб.
+                        </div>
+                    </div>
+                    <div class="border">Стоимость саморезов:
+                        <div>
+                            <a class="priceSelfTapping"></a>
+                        руб.
+                        </div>
+                    </div>
+                    <div class="border">Стоимость столбов:
+                        <div><a class="pricePillar"></a>
+                        руб.
+                        </div>
+                    </div>
+                    <div class="border">Стоимость лаг:
+                        <div><a class="priceLag"></a>
+                            руб.
+                        </div>
+                    </div>
+                    <div class="border">Стоимость монтажа:
+                        <div>
+                            <a class="priceInstallation"></a>
+                            руб.
+                        </div>
+                    </div>
+                    <div class="border">Общая стоимость:
+                        <div><a class="priceAll"></a>
+                        руб.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="printDoc" onclick="window.print()">Распечатать</button>
+    </div>
+
+</div>
+
+</body>
 
 
 <script src="index.js"></script>
-</div>
-</body>
 </html>
 

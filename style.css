@@ -1,32 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-@media (min-width: 320px) and (max-width: 639px){
+@media (min-width: 320px) and (max-width: 639px) {
 
-    *
-    {
-        font-family: Montserrat;
+    * {
+        font-family: 'Montserrat', sans-serif;
         max-width: 320px;
         margin: 0 auto;
         padding: 0;
     }
 
-    body
-    {
+    body {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: #DEDEDE;
     }
 
-    .calc_header
-    {
+    .calc_header {
         display: flex;
         justify-content: center;
     }
 
-    h1
-    {
+    h1 {
         padding: 50px 0;
         font-size: 20px;
         font-weight: 500;
@@ -35,15 +31,13 @@
         align-items: center;
     }
 
-    .allDropMenu
-    {
+    .allDropMenu {
 
         max-width: 320px;
         margin: 0 auto;
     }
 
-    .leftMenu
-    {
+    .leftMenu {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,8 +46,7 @@
         flex-direction: column;
     }
 
-    span
-    {
+    span {
         position: relative;
         display: flex;
         padding: 10px 0;
@@ -63,7 +56,7 @@
         font-size: 16px;
     }
 
-    i{
+    i {
         position: absolute;
         content: '';
         display: flex;
@@ -79,8 +72,7 @@
         font-style: normal;
     }
 
-    input
-    {
+    input {
         width: 140px;
         height: 50px;
         display: flex;
@@ -96,8 +88,7 @@
         background-color: #DEDEDE;
     }
 
-    select
-    {
+    select {
         text-align: center;
         width: 300px;
         height: 50px;
@@ -110,13 +101,11 @@
         margin: 5px 0;
     }
 
-    label
-    {
+    label {
         margin: 0;
     }
 
-    input::placeholder
-    {
+    input::placeholder {
         font-weight: 300;
         font-size: 12px;
         display: flex;
@@ -129,13 +118,11 @@
         -webkit-appearance: none;
     }
 
-    footer
-    {
+    footer {
         margin-top: 100px;
     }
 
-    .euroHeader
-    {
+    .euroHeader {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -148,16 +135,14 @@
 }
 
 @media (min-width: 640px) and (max-width: 1199px) {
-    *
-    {
-        font-family: Montserrat;
+    * {
+        font-family: 'Montserrat', sans-serif;
         max-width: 640px;
         margin: 0 auto;
         padding: 0;
     }
 
-    body
-    {
+    body {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -165,14 +150,12 @@
         background-color: #DEDEDE;
     }
 
-    .calc_header
-    {
+    .calc_header {
         display: flex;
         justify-content: center;
     }
 
-    h1
-    {
+    h1 {
         padding: 50px 0;
         font-size: 20px;
         font-weight: 500;
@@ -181,20 +164,17 @@
         align-items: center;
     }
 
-    .allDropMenu
-    {
+    .allDropMenu {
         max-width: 1200px;
         margin: 0 auto;
     }
 
-    .leftMenu
-    {
+    .leftMenu {
         display: flex;
         flex-direction: column;
     }
 
-    span
-    {
+    span {
         position: relative;
         padding: 5px;
         display: flex;
@@ -205,7 +185,7 @@
         font-size: 16px;
     }
 
-    i{
+    i {
         position: absolute;
         content: '';
         display: flex;
@@ -221,8 +201,7 @@
         font-style: normal;
     }
 
-    input
-    {
+    input {
         width: 140px;
         height: 50px;
         display: flex;
@@ -238,8 +217,7 @@
         background-color: #DEDEDE;
     }
 
-    select
-    {
+    select {
         text-align: center;
         width: 300px;
         height: 50px;
@@ -252,13 +230,11 @@
         margin: 0;
     }
 
-    label
-    {
+    label {
         margin-right: 0;
     }
 
-    input::placeholder
-    {
+    input::placeholder {
         font-weight: 300;
         font-size: 12px;
         display: flex;
@@ -271,23 +247,20 @@
         -webkit-appearance: none;
     }
 
-    footer
-    {
+    footer {
         margin-top: 100px;
     }
 
 }
 
 @media (min-width: 1200px) {
-    *
-    {
-        font-family: Montserrat;
-        padding: 0;
+    * {
+        font-family: 'Montserrat', sans-serif;
         margin: 0 auto;
         max-width: 1400px;
     }
-    body
-    {
+
+    body {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -295,8 +268,7 @@
         background-color: #DEDEDE;
     }
 
-    h1
-    {
+    .headerMenu {
         padding: 50px 0;
         font-size: 40px;
         font-weight: 500;
@@ -305,84 +277,88 @@
         align-items: center;
     }
 
-    .calc_header
-    {
+    .calc_header {
         display: flex;
         justify-content: center;
     }
 
-    .allDropMenu
-    {
+    .allDropMenu {
         max-width: 1600px;
         margin: 0 auto;
     }
 
-  .leftMenu
-  {
-      flex: 0 0;
-      display: flex;
-      flex-direction: column;
-      font-size: 18px;
-      font-width: 500;
-  }
+    .leftMenu {
+        flex: 0 0;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        font-width: 500;
+    }
 
-  select
-  {
-      text-align: left;
-      width: 360px;
-      height: 60px;
-      font-size: 18px;
-      font-weight: 500;
-      border: 1px solid #0B7992;
-      border-radius: 30px;
-      appearance: none;
-      padding-left: 80px;
-      background: url("Vector.svg") no-repeat 15px ;
-      margin: 0;
-  }
-  option
-  {
-      background-color: #DEDEDE;
-  }
+    select {
+        text-align: left;
+        width: 360px;
+        height: 60px;
+        font-size: 18px;
+        font-weight: 500;
+        border: 1px solid #0B7992;
+        border-radius: 30px;
+        appearance: none;
+        padding-left: 60px;
+        background: url("Vector.svg") no-repeat 15px;
+        margin: 0;
 
-  input
-  {
-      width: 170px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 18px;
-      font-weight: 500;
-      border: 1px solid #0B7992;
-      border-radius: 30px;
-      margin: 0;
-      padding-left: 70px;
-      padding-right: 120px;
-      background-color: #DEDEDE;
-  }
+    }
 
-  input::placeholder
-  {
-      font-weight: 300;
-      font-size: 10px;
-      display: flex;
-      width: 100px;
-      justify-content: center;
-      align-items: center;
-  }
+    .dataCreate
+    {
+        margin-left: 0;
+    }
+
+    .h3Result
+    {
+        margin-left: 0;
+    }
+    option {
+        background-color: #DEDEDE;
+        margin-left: 50px;
+    }
+
+    input {
+        width: 170px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 500;
+        border: 1px solid #0B7992;
+        border-radius: 30px;
+        margin: 0;
+        padding-left: 70px;
+        padding-right: 120px;
+        background-color: #DEDEDE;
+    }
+
+    input::placeholder {
+        font-weight: 300;
+        font-size: 10px;
+        display: flex;
+        /*width: 100px;*/
+        justify-content: center;
+        align-items: center;
+    }
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
     }
 
-    label
-    {
+    label {
         margin-right: 0;
     }
 
-    i{
+    i {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -391,59 +367,274 @@
         font-weight: 500;
         font-size: 18px;
         height: 85%;
-        right: 30px;
+        right: 20px;
         top: 5px;
-        width: 120px;
-        /*padding-left: 33px;*/
+        width: 100px;
         font-style: normal;
     }
 
-  span
-  {
-      position: relative;
-      padding: 5px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 auto;
-      width: 1080px;
-  }
-
-  footer
-  {
-      margin-top: 100px;
-  }
-
-  .workProf .minusProf
-  {
-      position: absolute;
-      top: 10px;
-      right: 310px;
-      font-size: 30px;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 5px 15px;
-
-  }
-    .workProf .plusProf
-  {
-      position: absolute;
-      top: 10px;
-      right: 150px;
-      font-size: 30px;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 5px 15px;
-  }
-
-    .workProfNumber[]{
-        width: 200px;
-        padding-left: 60px;
-        padding-right: 60px;
-        background-color: red;
+    span {
+        position: relative;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1080px;
     }
+
+    footer {
+        margin-top: 100px;
+    }
+
+    .workProf .minusProf {
+        position: absolute;
+        top: 10px;
+        right: 310px;
+        font-size: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px 15px;
+
+    }
+
+    .workProf .plusProf {
+        position: absolute;
+        top: 10px;
+        right: 150px;
+        font-size: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px 15px;
+    }
+
+    .printCalcResult{
+        margin-top: 20vh;
+    }
+
+    .content
+    {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid #0B7992;
+        margin-bottom: 50px;
+        padding: 30px;
+    }
+
+    .LogoRequisites
+    {
+        background: url("LogoPrint.png") no-repeat;
+        width: 100%;
+        height: 60px;
+        background-size: contain;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .requisites{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10vh;
+        margin-left: 0;
+        gap: 10px;
+    }
+    .headerRequisites{
+        margin-left: 0;
+    }
+    .textRequisites{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        width: 260px;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: 0;
+    }
+
+    .calculation
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0;
+        font-size: 16px;
+        gap: 20px;
+        width: 100%;
+        font-weight: 500;
+    }
+
+    .calculation div{
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .result
+    {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .result a{
+        position: absolute;
+        width: 100px;
+        right: 40px;
+    }
+
+    .priceResult a{
+        width: 100px;
+        text-align: left;
+    }
+
+    .border:nth-child(-n + 8)
+    {
+        border-bottom: 1px solid black;
+    }
+
+    .priceResult{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profButton
+    {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        padding: 20px 40px;
+        border: 1px solid #0B7992;
+        background: #DEDEDE;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    .bottomText
+    {
+        margin-top: 10px;
+    }
+
+    .h2Requisites
+    {
+        margin-bottom: 10px;
+    }
+
+    .printDoc
+    {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        padding: 20px 40px;
+        border: 1px solid #0B7992;
+        background: #DEDEDE;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+}
+
+@media print {
+
+    .headerMenu{
+        display: none;
+    }
+
+    .calcMenu
+    {
+        display: none;
+    }
+
+    .printCalcResult
+    {
+        display: none;
+    }
+
+    .content
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100vh;
+    }
+
+    .requisites{
+        padding-bottom: 10vh;
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .textRequisites{
+        display: flex;
+        width: 300px;
+        margin-top: 20px;
+        flex-direction: column;
+        padding: 15px;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: 0;
+    }
+
+    .calculation
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0;
+        font-size: 16px;
+        gap: 20px;
+        width: 100%;
+        font-weight: 500;
+    }
+
+
+    .calculation div{
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .result
+    {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .result a{
+        position: absolute;
+        width: 100px;
+        right: 30px;
+    }
+
+    .priceResult a{
+        width: 100px;
+        right: 30px;
+        text-align: left;
+    }
+
+    .dataCreate
+    {
+        margin-left: 0;
+    }
+
+    .border:nth-child(-n + 6)
+    {
+        border-bottom: 1px solid black;
+    }
+
+    .priceResult{
+        display: flex;
+        flex-direction: column;
+    }
+
+    button{
+        display: none;
+    }
+
+    .h3Result
+    {
+        margin-left: 0;
+    }
+
 }
 
 
