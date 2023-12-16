@@ -152,26 +152,26 @@
                 </select>
             </span>
         </div>
-        <div class="euroBlock" style="display: none">
+        <div class="euroBlock" style="display: none; flex-direction: column" >
             <div class="headerMenu" style="padding-bottom: 50px;">Стоимость евроштакетника</div>
             <span>Стоимость столбов за 1 п.м
-                         <input type="number" placeholder="Введите значение" class="pillarPrice"> <i>Руб.</i>
+                         <input type="number" value="638" placeholder="Введите значение" class="pillarPrice"> <i>Руб.</i>
                      </span>
             <span>Стоимость лаг за 1 п.м
-                         <input type="number" placeholder="Введите значение" class="LagPrice"> <i>Руб.</i>
+                         <input type="number" value="366" placeholder="Введите значение" class="LagPrice"> <i>Руб.</i>
                      </span>
             <span>Стоимость штакетника за 1 п.м
                          <input type="number" value="180" placeholder="Введите значение" class="fencePrice"> <i>Руб.</i>
                      </span>
             <span>Стоимость саморезов за 1 шт.
-                         <input type="number" placeholder="Введите значение" class="selfTappingScrewsPrice"> <i>Руб.</i>
+                         <input type="number" value="5" placeholder="Введите значение" class="selfTappingScrewsPriceEuro"> <i>Руб.</i>
                      </span>
             <span>Стоимость монтажа за 1 п.м
-                         <input type="number" placeholder="Введите значение" class="InstallationPrice_Euro"> <i>Руб.</i>
+                         <input type="number" value="900" placeholder="Введите значение" class="InstallationPrice_Euro"> <i>Руб.</i>
                      </span>
-            <button onclick="calcEuro()"> Рассчитать</button>
+            <button class="btnEuro" onclick="calcEuro()"> Рассчитать</button>
         </div>
-        <div class="profBlock" style="display: none">
+        <div class="profBlock" style="display: none; flex-direction: column">
             <div class="headerMenu" style="padding-bottom: 50px;">Стоимость профнастила</div>
             <span>Стоимость столбов за 1м2
                          <input type="number" value="630" placeholder="Введите значение" class="profPillarPrice"> <i>Руб.</i>
@@ -188,11 +188,11 @@
             <span>Стоимость монтажа за 1м2
                          <input type="number" value="800" placeholder="Введите значение" class="InstallationPrice_Prof"> <i>Руб.</i>
                      </span>
-            <button class="profButton" onclick="calcTube()"> Рассчитать</button>
+            <button class="profButton" onclick="calcProf()"> Рассчитать</button>
         </div>
     </div>
 
-    <div class="printCalcResult" style="display: none">
+    <div class="printCalcResult" style="display: none; margin-top: 20px; flex-direction: column; width: 100%;">
         <div class="content">
             <div class="requisites">
                 <div class="dataCreate"></div>
@@ -226,7 +226,7 @@
                 </div>
             </div>
             <h1>Расчеты</h1>
-            <div class="calculation">
+            <div class="calculationProf" style="display: none; margin: 0;">
                 <div class="result">
                     <h3 class="h3Result">Общие расчеты: </h3>
                     <div class="border">Общий периметр:
@@ -299,6 +299,84 @@
                     </div>
                     <div class="border">Общая стоимость:
                         <div><a class="priceAll"></a>
+                        руб.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calculationEuro" style="display: none">
+                <div class="result">
+                    <h3 class="h3Result">Общие расчеты: </h3>
+                    <div class="border">Общий периметр:
+                        <div>
+                            <a class="resultPerimeterEuro"></a>
+                            метров
+                        </div>
+                    </div>
+                    <div class="border">Общая площадь
+                        <div>
+                            <a class="resultPlazaEuro"></a>
+                            метров^2
+                        </div>
+                    </div>
+                    <div class="border">Общее количество столбов
+                        <div>
+                            <a class="resultPillarEuro"></a>
+                            шт.
+                        </div>
+                    </div>
+                    <div class="border">Общее количество саморезов
+                        <div>
+                            <a class="resultSelfTappingEuro"></a>
+                            шт.
+                        </div>
+                    </div>
+
+                    <div class="border">Количество лаг на забор
+                        <div>
+                            <a class="resultLagEuro"></a>
+                        шт.
+                        </div>
+                    </div>
+                    <div class="border">Общее количество листов
+                        <div>
+                            <a class="resultListEuro"></a>
+                            шт.
+                        </div>
+                    </div>
+                </div>
+                <div class="priceResult">
+                    <h3 class="h3Result">Стоимость: </h3>
+                    <div class="border">Стоимость листов евроштакетника:
+                        <div>
+                            <a class="priceEuro"></a>
+                            руб.
+                        </div>
+                    </div>
+                    <div class="border">Стоимость саморезов:
+                        <div>
+                            <a class="priceSelfTappingEuro"></a>
+                        руб.
+                        </div>
+                    </div>
+                    <div class="border">Стоимость столбов:
+                        <div><a class="pricePillarEuro"></a>
+                        руб.
+                        </div>
+                    </div>
+                    <div class="border">Стоимость лаг:
+                        <div><a class="priceLagEuro"></a>
+                            руб.
+                        </div>
+                    </div>
+                    <div class="border">Стоимость монтажа:
+                        <div>
+                            <a class="priceInstallationEuro"></a>
+                            руб.
+                        </div>
+                    </div>
+                    <div class="border">Общая стоимость:
+                        <div><a class="priceAllEuro"></a>
                         руб.
                         </div>
                     </div>
