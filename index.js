@@ -93,15 +93,6 @@ minusNumber = () => {
     }
 }
 
-const lagAllSize = {
-    "50х50х2х6000": 366,
-    "40х40х1.5х6000": 225,
-    "40х20х1.5х6000": 164,
-    "25х25х1.5х6000": 140,
-    "20х20х1.5х6000": 104,
-    "15х15х1.5х6000": 75,
-}
-
 const tubeAllSize = {
     "60*60*2,0": 638,
     "20*20*1,5": 104,
@@ -114,21 +105,46 @@ const tubeAllSize = {
     "60*40*3х6000": 464,
     "50*50*2,0": 366,
 }
+const tubeSilence = {
+    "60*60": 638,
+    "20*20": 104,
+    "80*80": 996,
+    "80*80х12000": 765,
+    "50*50х6000": 366,
+    "40*40х6000": 269,
+    "30*30х6000": 160,
+    "50*25": 335,
+    "60*40х6000": 464,
+    "50*50": 366,
+}
 let keysTube = Object.keys( tubeAllSize )
-let keysStube = Object.keys( tubeAllSize )
-keysTube.forEach( ( key ) => {
-    const tubeSizes = document.createElement( 'option' )
-    tubeSizes.setAttribute( 'value', key )
-    tubeSizes.innerHTML = key
-    tubeSize.appendChild( tubeSizes )
+let keysSilence = Object.keys( tubeSilence )
+
+keysSilence.forEach( ( key ) => {
+    const stubTubes = document.createElement( 'option' )
+    stubTubes.setAttribute( 'value', key )
+    stubTubes.innerHTML = key
+    stubTube.appendChild( stubTubes)
+    console.log(stubTubes)
+
 } )
-keysStube.forEach( ( key ) => {
+keysTube.forEach( ( keys ) => {
     const tubeSizes = document.createElement( 'option' )
-    tubeSizes.setAttribute( 'value', key )
-    tubeSizes.innerHTML = key
-    stubTube.appendChild( tubeSizes )
+    tubeSizes.setAttribute( 'value', keys)
+    tubeSizes.innerHTML = keys
+    tubeSize.appendChild( tubeSizes )
+    console.log(tubeSizes)
 } )
 
+
+const lagAllSize = {
+    "50х50х2х6000": 366,
+    "40х40х1.5х6000": 225,
+    "40х20х1.5х6000": 164,
+    "25х25х1.5х6000": 140,
+    "20х20х1.5х6000": 104,
+    "15х15х1.5х6000": 75,
+}
 
 let keysLag = Object.keys( lagAllSize )
 keysLag.forEach( ( keys ) => {
@@ -139,18 +155,16 @@ keysLag.forEach( ( keys ) => {
 
 } )
 
-
-tubeSize.value = stubTube.value
-
 tubeSize.addEventListener( 'change', () => {
-    if ( tubeSize.value !== stubTube.value ) {
-        stubTube.value = tubeSize.value
+    if ( keysTube.indexOf(tubeSize.value) !== keysSilence.indexOf(stubTube.value)){
+        let index = stubTube[keysTube.indexOf(tubeSize.value)]
+        stubTube.value = index.value
     }
-
 } )
 stubTube.addEventListener( 'change', () => {
-    if ( stubTube.value !== tubeSize.value ) {
-        tubeSize.value = stubTube.value
+    if ( keysSilence.indexOf(stubTube.value) !== keysTube.indexOf(tubeSize.value)){
+        let index = tubeSize[keysSilence.indexOf(stubTube.value)]
+        tubeSize.value = index.value
     }
 } )
 
