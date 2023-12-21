@@ -19,15 +19,15 @@ const ProfLag_Price = document.querySelector( '.profLagPrice' ) // Объявл�
 const Prof_Price = document.querySelector( '.profPrice' ) // Объявление стоимости профнастила
 const SelfTappingScrews_Price = document.querySelector( '.selfTappingScrewsPriceProf' ) // Объявление стоимости саморезов
 const InstallationPrice = document.querySelector( '.InstallationPrice_Prof' ) // Объявление стоимости монтажа
-const calculationProf = document.querySelector('.calculationProf') // Результат на профнастил
+const calculationProf = document.querySelector( '.calculationProf' ) // Результат на профнастил
 
 //Евроштакетник
 const Pillar_Price = document.querySelector( '.pillarPrice' ) // Объявление стоимости столбов у штакетника
 const Lag_Price = document.querySelector( '.LagPrice' ) // Объявление стоимости лаг у штакетника
 const Fence_Price = document.querySelector( '.fencePrice' ) // Объявление стоимости штакетника
-const selfTappingScrewsPriceEuro = document.querySelector('.selfTappingScrewsPriceEuro') // Объявление стоимости саморезов у евроштакетника
-const InstallationPrice_Euro = document.querySelector('.InstallationPrice_Euro') // Объявление стоимости монтажа у штакетника
-const calculationEuro = document.querySelector('.calculationEuro') // Объявление результата штакетника
+const selfTappingScrewsPriceEuro = document.querySelector( '.selfTappingScrewsPriceEuro' ) // Объявление стоимости саморезов у евроштакетника
+const InstallationPrice_Euro = document.querySelector( '.InstallationPrice_Euro' ) // Объявление стоимости монтажа у штакетника
+const calculationEuro = document.querySelector( '.calculationEuro' ) // Объявление результата штакетника
 
 let A = document.querySelector( '.widthA' )
 let B = document.querySelector( '.widthB' )
@@ -58,14 +58,12 @@ selectId.addEventListener( 'change', function () {
     }
 
 
-    if (  calculationEuro.style.display === 'block')
-    {
+    if ( calculationEuro.style.display === 'block' ) {
         calculationEuro.style.display = 'none'
         printCalcResult.style.display = 'none'
     }
 
-    if (  calculationProf.style.display === 'block')
-    {
+    if ( calculationProf.style.display === 'block' ) {
         calculationProf.style.display = 'none'
         printCalcResult.style.display = 'none'
     }
@@ -124,16 +122,16 @@ keysSilence.forEach( ( key ) => {
     const stubTubes = document.createElement( 'option' )
     stubTubes.setAttribute( 'value', key )
     stubTubes.innerHTML = key
-    stubTube.appendChild( stubTubes)
-    console.log(stubTubes)
+    stubTube.appendChild( stubTubes )
+    console.log( stubTubes )
 
 } )
 keysTube.forEach( ( keys ) => {
     const tubeSizes = document.createElement( 'option' )
-    tubeSizes.setAttribute( 'value', keys)
+    tubeSizes.setAttribute( 'value', keys )
     tubeSizes.innerHTML = keys
     tubeSize.appendChild( tubeSizes )
-    console.log(tubeSizes)
+    console.log( tubeSizes )
 } )
 
 
@@ -156,14 +154,14 @@ keysLag.forEach( ( keys ) => {
 } )
 
 tubeSize.addEventListener( 'change', () => {
-    if ( keysTube.indexOf(tubeSize.value) !== keysSilence.indexOf(stubTube.value)){
-        let index = stubTube[keysTube.indexOf(tubeSize.value)]
+    if ( keysTube.indexOf( tubeSize.value ) !== keysSilence.indexOf( stubTube.value ) ) {
+        let index = stubTube[keysTube.indexOf( tubeSize.value )]
         stubTube.value = index.value
     }
 } )
 stubTube.addEventListener( 'change', () => {
-    if ( keysSilence.indexOf(stubTube.value) !== keysTube.indexOf(tubeSize.value)){
-        let index = tubeSize[keysSilence.indexOf(stubTube.value)]
+    if ( keysSilence.indexOf( stubTube.value ) !== keysTube.indexOf( tubeSize.value ) ) {
+        let index = tubeSize[keysSilence.indexOf( stubTube.value )]
         tubeSize.value = index.value
     }
 } )
@@ -195,9 +193,6 @@ let options = {
     minute: 'numeric',
     second: 'numeric'
 }
-
-
-
 
 
 calcProf = () => {
