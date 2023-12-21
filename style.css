@@ -5,53 +5,36 @@
 
     * {
         font-family: 'Montserrat', sans-serif;
-        max-width: 320px;
-        margin: 0 auto;
-        padding: 0;
+
     }
 
     body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        max-width: 320px;
+        margin: 0 auto;
         background-color: #DEDEDE;
     }
 
-    .calc_header {
+    .calc{
         display: flex;
-        justify-content: center;
-    }
-
-    h1 {
-        padding: 50px 0;
-        font-size: 20px;
-        font-weight: 500;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .allDropMenu {
-
-        max-width: 320px;
-        margin: 0 auto;
-    }
-
-    .leftMenu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 15px;
-        gap: 10px;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    .headerMenu{
+        font-weight: 600;
+        font-size: 24px;
+        align-self: center;
+    }
+
+
 
     span {
         position: relative;
         display: flex;
+        justify-content: center;
         padding: 10px 0;
         flex-direction: column;
-        margin: 0 auto;
         width: 320px;
         font-size: 16px;
     }
@@ -65,48 +48,35 @@
         border-left: 1px solid #0B7992;
         font-weight: 500;
         font-size: 16px;
-        height: 50%;
+        height: 56%;
         right: 30px;
-        top: 35px;
+        top: 30px;
         padding-left: 20px;
         font-style: normal;
     }
 
     input {
-        width: 140px;
+        width: 250px;
+        text-align: center;
         height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         font-size: 16px;
         font-weight: 500;
         border: 1px solid #0B7992;
         border-radius: 30px;
-        margin: 5px 0;
-        padding-left: 30px;
-        padding-right: 130px;
+        padding-right: 50px;
         background-color: #DEDEDE;
     }
 
     select {
-        text-align: center;
         width: 300px;
         height: 50px;
         font-size: 16px;
         font-weight: 500;
+        padding-left: 60px;
         border: 1px solid #0B7992;
         border-radius: 30px;
         appearance: none;
         background: url("Vector.svg") no-repeat 15px;
-        margin: 5px 0;
-    }
-
-    option {
-        margin-left: 20px;
-    }
-
-    label {
-        margin: 0;
     }
 
     input::placeholder {
@@ -122,18 +92,100 @@
         -webkit-appearance: none;
     }
 
-    footer {
-        margin-top: 100px;
+    .workProf{
+        position: relative;
+    }
+    .plusProf{
+        top: 37px;
+        position: absolute;
+        right: 100px;
+        border: 1px solid #0B7992;
+        background: transparent;
+        border-radius: 30px;
+        padding: 10px 20px;
+
+    }
+    .minusProf{
+        top: 37px;
+        left: 30px;
+        position: absolute;
+        border: 1px solid #0B7992;
+        background: transparent;
+        border-radius: 30px;
+        padding: 10px 20px;
     }
 
-    .euroHeader {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 100px;
-        font-family: Montserrat;
-        font-size: 40px;
+    .profBlock{
+        margin-top: 30px;
+    }
+
+    .euroBlock{
+        margin-top: 30px;
+    }
+
+    .profButton{
+        background: transparent;
+        margin-top: 30px;
+        padding: 10px 30px;
+        border-radius: 30px;
+        border: 1px solid #0B7992;
         font-weight: 500;
+        color: #0B7992;
+        margin-bottom: 50px;
+    }
+
+    .btnEuro{
+        background: transparent;
+        margin-top: 30px;
+        padding: 10px 30px;
+        border-radius: 30px;
+        border: 1px solid #0B7992;
+        font-weight: 500;
+        color: #0B7992;
+        margin-bottom: 50px;
+    }
+
+
+    .requisites{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .textRequisites{
+        font-size: 10px;
+    }
+
+    .result{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .border{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+    .border:nth-child(-n+8){
+        border-bottom: 1px solid black;
+    }
+
+    .border a{
+        position: absolute;
+        text-align: left;
+        width: 60px;
+        right: 30px;
+    }
+
+    .printDoc{
+        margin-top: 20px;
+        border: 1px solid #0B7992;
+        color: #0B7992;
+        background: transparent;
+        padding: 10px 20px;
+        border-radius: 30px;
+        margin-bottom: 20px;
     }
 
 }
@@ -141,37 +193,36 @@
 @media (min-width: 640px) and (max-width: 1199px) {
     * {
         font-family: 'Montserrat', sans-serif;
-        max-width: 640px;
-        margin: 0 auto;
-        padding: 0;
+
     }
 
     body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: #DEDEDE;
-    }
-
-    .calc_header {
-        display: flex;
-        justify-content: center;
-    }
-
-    h1 {
-        padding: 50px 0;
-        font-size: 20px;
-        font-weight: 500;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .allDropMenu {
-        max-width: 1200px;
+        max-width: 640px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        background: #DEDEDE;
     }
+
+    .calc{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calcMenu{
+        margin-top: 50px;
+    }
+
+    .headerMenu
+    {
+        font-size: 40px;
+        color: black;
+        display: flex;
+        align-self: center;
+        font-weight: 600;
+    }
+
 
     .leftMenu {
         display: flex;
@@ -184,8 +235,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 auto;
-        width: 1080px;
         font-size: 16px;
     }
 
@@ -198,6 +247,7 @@
         border-left: 1px solid #0B7992;
         font-weight: 500;
         font-size: 18px;
+        width: 60px;
         height: 85%;
         right: 30px;
         top: 5px;
@@ -205,12 +255,8 @@
         font-style: normal;
     }
 
-    option {
-        margin-left: 50px;
-    }
-
     input {
-        width: 140px;
+        width: 210px;
         height: 50px;
         display: flex;
         justify-content: center;
@@ -220,14 +266,14 @@
         border: 1px solid #0B7992;
         border-radius: 30px;
         margin: 0;
-        padding-left: 30px;
-        padding-right: 130px;
+        padding-right: 0;
+        padding-left: 90px;
         background-color: #DEDEDE;
     }
 
     select {
-        text-align: center;
         width: 300px;
+        padding-left: 60px;
         height: 50px;
         font-size: 16px;
         font-weight: 500;
@@ -235,11 +281,6 @@
         border-radius: 30px;
         appearance: none;
         background: url("Vector.svg") no-repeat 15px;
-        margin-right: 0;
-    }
-
-    label {
-        margin-right: 0;
     }
 
     input::placeholder {
@@ -255,10 +296,122 @@
         -webkit-appearance: none;
     }
 
-    footer {
-        margin-top: 100px;
+    .workProf{
+        position: relative;
     }
 
+    .minusProf{
+        position: absolute;
+        right: 240px;
+        background: transparent;
+        border: 1px solid #0B7992;
+        border-radius: 30px;
+        padding: 5px 20px;
+    }
+
+    .euroBlock{
+        margin-top: 50px;
+    }
+
+    .profBlock{
+        margin-top: 50px;
+    }
+
+    .plusProf{
+        position: absolute;
+        right: 120px;
+        background: transparent;
+        border: 1px solid #0B7992;
+        border-radius: 30px;
+        padding: 5px 20px;
+    }
+
+    .btnEuro{
+        border: 1px solid #0B7992;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 30px;
+        margin-bottom: 30px;
+        background: transparent;
+        color: #0B7992;
+        font-weight: 500;
+    }
+
+    .profButton{
+        border: 1px solid #0B7992;
+        padding: 10px;
+        margin-top: 30px;
+        border-radius: 30px;
+        color: #0B7992;
+        font-weight: 500;
+        background: transparent;
+        margin-bottom: 50px;
+        cursor: pointer;
+    }
+
+    .requisites{
+        font-size: 12px;
+    }
+
+    .textRequisites{
+        margin-top: 30px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content h1{
+        margin-top: 50px;
+        align-self: center;
+    }
+
+    .result{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    .border{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .border:nth-child(-n + 8){
+        border-bottom: 1px solid black;
+    }
+
+    .border a{
+        position: absolute;
+        width: 100px;
+        right: 50px;
+        text-align: left;
+    }
+
+    .priceResult{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .printDoc{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 10px 30px;
+        color: #0B7992;
+        border: 1px solid #0B7992;
+        background: transparent;
+        border-radius: 30px;
+        font-weight: 500;
+        cursor: pointer;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -267,7 +420,7 @@
     }
 
     body {
-        max-width: 1400px;
+        max-width: 1200px;
         margin: 0 auto;
         background-color: #DEDEDE;
         box-sizing: border-box;
