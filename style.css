@@ -581,6 +581,8 @@
         padding: 20px 40px;
         border: 1px solid #0B7992;
         background: #DEDEDE;
+        color: #0B7992;
+        font-weight: 500;
         border-radius: 30px;
         cursor: pointer;
     }
@@ -591,6 +593,8 @@
         margin-bottom: 50px;
         padding: 20px 40px;
         border: 1px solid #0B7992;
+        color: #0B7992;
+        font-weight: 500;
         background: #DEDEDE;
         border-radius: 30px;
         cursor: pointer;
@@ -603,7 +607,9 @@
         border: 1px solid #0B7992;
         background: #DEDEDE;
         border-radius: 30px;
+        font-weight: 500;
         cursor: pointer;
+        color: #0B7992;
     }
 }
 
@@ -619,9 +625,9 @@
 
 
     .content {
-        width: 1000px;
-        margin-bottom: 50px;
-        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
 
